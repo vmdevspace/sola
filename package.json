@@ -1,0 +1,27 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "browserslist": [
+    "cover 99.5%"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.35",
+    "postcss-sort-media-queries": "^5.2.0",
+    "sass": "^1.65.1",
+    "vite": "^4.4.5",
+    "vite-plugin-handlebars": "^1.6.0",
+    "vite-plugin-inspect": "^0.7.38"
+  },
+  "dependencies": {
+    "path": "^0.12.7",
+    "resolve": "^1.22.4"
+  }
+}

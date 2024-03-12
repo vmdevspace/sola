@@ -1,0 +1,34 @@
+.main-menu {
+    display: flex;
+    flex-direction: row;
+
+    .item {
+        margin: 0 5px 0 5px;
+
+        &:first-child {
+            margin: 0 5px 0 0;
+        }
+
+        &:last-child {
+            margin: 0 0 0 5px;
+        }
+
+        &:only-child {
+            margin: 0;
+        }
+
+        .link {
+            text-transform: uppercase;
+
+            font-family: 'Aliens';
+            font-size: 14px;
+
+            color: #F5F5F5;
+            transition: color .25s ease;
+
+            &:hover {
+                color: #FF0000;
+            }
+        }
+    }
+}
