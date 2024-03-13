@@ -15,8 +15,18 @@
 @import './scss/layout/blocks/header/header';
 @import './scss/layout/blocks/footer/footer';
 
+@import './scss/layout/blocks/pages/home/about';
+@import './scss/layout/blocks/pages/home/achievements';
+@import './scss/layout/blocks/pages/home/contact-us';
+@import './scss/layout/blocks/pages/home/latest-news';
+@import './scss/layout/blocks/pages/home/latest-projects';
+@import './scss/layout/blocks/pages/home/services';
+@import './scss/layout/blocks/pages/home/testimonials';
+@import './scss/layout/blocks/pages/home/why-choose';
+
 // components
 @import './scss/layout/components/header/mobile-menu-btn';
+@import './scss/layout/components/header/slider';
 @import './scss/layout/components/header/main-menu';
 @import './scss/layout/components/footer/footer-menu';
 

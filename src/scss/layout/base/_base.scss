@@ -57,5 +57,15 @@ body {}
         }
     }
 
-    >.container-fluid {}
+    >.container-fluid {
+        max-width: auto;
+
+        @include media-breakpoint-only(sm) {
+            padding: 0 15px;
+        }
+
+        @include media-breakpoint-only(xs) {
+            padding: 0 15px;
+        }
+    }
 }

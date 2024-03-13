@@ -1,4 +1,31 @@
-// @font-face {
-// 	font-family: 'LostinWild';
-//     src: url('./fonts/lost/LostinWild.woff') format('woff');
-// }
+// Poppins-Light
+// Poppins-Regular
+// Poppins-Medium
+// Poppins-Italic
+
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url('./fonts/poppins/Poppins-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('./fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('./fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-Italic';
+    src: url('./fonts/poppins/Poppins-Italic.ttf');
+}
+
+// Syne-Bold
+
+@font-face {
+    font-family: 'Syne-Bold';
+    src: url('./fonts/syne/Syne-Bold.ttf');
+}
