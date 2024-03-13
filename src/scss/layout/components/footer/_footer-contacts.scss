@@ -1,0 +1,42 @@
+.footer-contacts {
+
+    .item {
+        margin: 7px 0 7px 0;
+
+        &:first-child {
+            margin: 0 0 7px 0;
+        }
+
+        &:last-child {
+            margin: 7px 0 0 0;
+        }
+
+        &:only-child {
+            margin: 0;
+        }
+    }
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .i {
+
+        &::before {
+            font-size: 14px;
+            color: #FD8C4E;
+        }
+    }
+
+    .text {
+        padding-left: 10px;
+
+        .t {
+            font-family: 'Poppins-Regular';
+            font-size: 16px;
+            color: #9B9B9B;
+        }
+    }
+}

@@ -1,16 +1,20 @@
+.main-nav {
+    padding-right: 60px;
+}
+
 .main-menu {
     display: flex;
     flex-direction: row;
 
     .item {
-        margin: 0 5px 0 5px;
+        margin: 0 20px 0 20px;
 
         &:first-child {
-            margin: 0 5px 0 0;
+            margin: 0 20px 0 0;
         }
 
         &:last-child {
-            margin: 0 0 0 5px;
+            margin: 0 0 0 20px;
         }
 
         &:only-child {
@@ -20,14 +24,14 @@
         .link {
             text-transform: uppercase;
 
-            font-family: 'Aliens';
+            font-family: 'Poppins-Medium';
             font-size: 14px;
 
-            color: #F5F5F5;
+            color: #4E4C49;
             transition: color .25s ease;
 
             &:hover {
-                color: #FF0000;
+                color: #FD8C4E;
             }
         }
     }

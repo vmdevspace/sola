@@ -1,0 +1,51 @@
+.footer-socials {
+    padding-top: 35px;
+
+    display: flex;
+    flex-direction: row;
+
+    .item {
+        margin: 0 12px 0 12px;
+
+        &:first-child {
+            margin: 0 12px 0 0;
+        }
+
+        &:last-child {
+            margin: 0 0 0 12px;
+        }
+
+        &:only-child {
+            margin: 0;
+        }
+
+        .link {
+            display: block;
+
+            &:hover {
+
+                .footer-social {
+
+                    .i {
+
+                        &::before {
+                            color: #FD8C4E;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer-social {
+
+    .i {
+
+        &::before {
+            font-size: 14px;
+            color: #A09D98;
+            transition: color .25s ease;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.header-callback-btn {
+    width: 175px;
+    height: 40px;
+
+    border: 2px solid #FD8C4E;
+    border-radius: 25px;
+
+    font-family: 'Poppins-Medium';
+    font-size: 14px;
+
+    background-color: #F9F4EC;
+    color: #FD8C4E;
+
+    transition: all .25s ease;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: #FD8C4E;
+        color: #FFFFFF;
+    }
+
+    // @include media-breakpoint-only(xxl) {}
+
+    // @include media-breakpoint-only(xl) {}
+
+    // @include media-breakpoint-only(lg) {}
+
+    // @include media-breakpoint-only(md) {}
+
+    // @include media-breakpoint-only(sm) {}
+
+    @include media-breakpoint-only(xs) {
+        width: 80px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+    @include media-breakpoint-down(lg) {
+        width: 120px;
+        height: 30px;
+    }
+}

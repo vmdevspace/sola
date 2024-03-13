@@ -25,10 +25,22 @@
 @import './scss/layout/blocks/pages/home/why-choose';
 
 // components
-@import './scss/layout/components/header/mobile-menu-btn';
+@import './scss/layout/components/header/fixed/header-top-items';
+@import './scss/layout/components/header/fixed/header-top-socials';
+
+@import './scss/layout/components/header/fixed/mobile-menu-btn';
+@import './scss/layout/components/header/fixed/main-menu';
+@import './scss/layout/components/header/fixed/header-callback-btn';
+
 @import './scss/layout/components/header/slider';
-@import './scss/layout/components/header/main-menu';
+
+@import './scss/layout/components/footer/footer';
 @import './scss/layout/components/footer/footer-menu';
+@import './scss/layout/components/footer/footer-bottom-item';
+@import './scss/layout/components/footer/footer-socials';
+@import './scss/layout/components/footer/footer-contacts';
+@import './scss/layout/components/footer/footer-gallery';
+@import './scss/layout/components/footer/footer-newsletter';
 
 .test {
     display: flex;

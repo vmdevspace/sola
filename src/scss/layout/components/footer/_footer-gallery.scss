@@ -1,0 +1,16 @@
+.footer-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    gap: 5px;
+
+    .item {
+
+        .link {
+            display: block;
+        }
+    }
+}
+
+.footer-gallery-slide {
+    display: block;
+}

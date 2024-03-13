@@ -1,0 +1,31 @@
+.footer-menu {
+
+    .item {
+        margin: 2px 0 2px 0;
+
+        &:first-child {
+            margin: 0 0 2px 0;
+        }
+
+        &:last-child {
+            margin: 2px 0 0 0;
+        }
+
+        &:only-child {
+            margin: 0;
+        }
+
+        .link {
+            font-family: 'Poppins-Regular';
+            font-size: 14px;
+            text-transform: uppercase;
+
+            color: #4E4C49;
+            transition: color .25s ease;
+
+            &:hover {
+                color: #FD8C4E;
+            }
+        }
+    }
+}
