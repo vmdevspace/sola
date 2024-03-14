@@ -3,7 +3,7 @@
     min-height: 200px;
 
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: auto auto auto 310px;
     gap: 10px;
 
     // @include media-breakpoint-only(xxl) {}
@@ -18,7 +18,7 @@
 
     // @include media-breakpoint-only(xs) {}
 
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(xl) {
         grid-template-columns: repeat(2, auto);
         gap: 50px 0;
     }

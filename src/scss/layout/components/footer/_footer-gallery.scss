@@ -7,10 +7,42 @@
 
         .link {
             display: block;
+
+            &:hover {
+
+                .footer-gallery-item {
+
+                    .slide {
+                        opacity: .75;
+                    }
+                }
+            }
         }
     }
 }
 
-.footer-gallery-slide {
+.footer-gallery-item {
+
+    .slide {
+        display: block;
+
+        opacity: 1;
+        transition: opacity .25s ease;
+    }
+}
+
+.footer-gallery-link {
     display: block;
+    margin-top: 15px;
+
+    font-family: "Poppins-Medium";
+    font-size: 14px;
+    text-transform: uppercase;
+
+    color: #4E4C49;
+    transition: color .25s ease;
+
+    &:hover {
+        color: #FD8C4E;
+    }
 }

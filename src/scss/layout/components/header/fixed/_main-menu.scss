@@ -1,5 +1,19 @@
 .main-nav {
     padding-right: 60px;
+
+    // @include media-breakpoint-only(xxl) {}
+
+    // @include media-breakpoint-only(xl) {}
+
+    @include media-breakpoint-only(lg) {
+        padding-right: 30px;
+    }
+
+    // @include media-breakpoint-only(md) {}
+
+    // @include media-breakpoint-only(sm) {}
+
+    // @include media-breakpoint-only(xs) {}
 }
 
 .main-menu {
