@@ -6,21 +6,25 @@
 @font-face {
     font-family: 'Poppins-Light';
     src: url('./fonts/poppins/Poppins-Light.ttf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Poppins-Regular';
     src: url('./fonts/poppins/Poppins-Regular.ttf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Poppins-Medium';
     src: url('./fonts/poppins/Poppins-Medium.ttf');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Poppins-Italic';
     src: url('./fonts/poppins/Poppins-Italic.ttf');
+    font-display: swap;
 }
 
 // Syne-Bold
@@ -28,4 +32,5 @@
 @font-face {
     font-family: 'Syne-Bold';
     src: url('./fonts/syne/Syne-Bold.ttf');
+    font-display: swap;
 }
