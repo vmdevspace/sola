@@ -1,0 +1,58 @@
+.contact-us-article {
+    width: 640px;
+
+    // @include media-breakpoint-only(xxl) {}
+
+    // @include media-breakpoint-only(xl) {}
+
+    // @include media-breakpoint-only(lg) {}
+
+    // @include media-breakpoint-only(md) {}
+
+    // @include media-breakpoint-only(sm) {}
+
+    // @include media-breakpoint-only(xs) {}
+
+    @include media-breakpoint-down(md) {
+        width: auto;
+    }
+
+    .header {
+
+        .top {}
+
+        .title {
+            font-size: 40px;
+
+            // @include media-breakpoint-only(xxl) {}
+
+            // @include media-breakpoint-only(xl) {}
+
+            // @include media-breakpoint-only(lg) {}
+
+            // @include media-breakpoint-only(md) {}
+
+            // @include media-breakpoint-only(sm) {}
+
+            @include media-breakpoint-only(xs) {
+                font-size: 30px;
+                line-height: 40px;
+            }
+
+        }
+    }
+
+    .text {
+        padding: 10px 0 0 0;
+
+        p {
+            font-size: 16px;
+
+            .phone {
+                font-family: 'Poppins-Medium';
+            }
+        }
+    }
+
+    .link {}
+}

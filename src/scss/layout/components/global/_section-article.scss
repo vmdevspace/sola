@@ -1,0 +1,30 @@
+.section-article {
+
+    .header {
+
+        .top {
+            color: #FD8C4E;
+            text-transform: uppercase;
+            font-family: 'Poppins-Medium';
+        }
+
+        .title {
+            font-family: 'Syne-Bold';
+            color: #1A2A36;
+            line-height: 45px;
+        }
+    }
+
+    .text {
+
+        p {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins-Regular';
+            color: #9B9B9B;
+            line-height: 24px;
+        }
+    }
+
+    .link {}
+}

@@ -25,7 +25,8 @@
 @import './scss/layout/blocks/pages/home/why-choose';
 
 // components
-@import './scss/layout/components/global/bottons';
+@import './scss/layout/components/global/links';
+@import './scss/layout/components/global/section-article';
 
 @import './scss/layout/components/header/fixed/header-top-items';
 @import './scss/layout/components/header/fixed/header-top-socials';
@@ -34,8 +35,10 @@
 @import './scss/layout/components/header/fixed/header-callback-btn';
 @import './scss/layout/components/header/slider';
 
+
 @import './scss/layout/components/pages/home/achievements-item';
-@import './scss/layout/components/pages/home/contact-us-item';
+@import './scss/layout/components/pages/home/contact-us-article';
+@import './scss/layout/components/pages/home/about-us-article';
 
 @import './scss/layout/components/footer/footer';
 @import './scss/layout/components/footer/footer-menu';
