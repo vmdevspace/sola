@@ -58,7 +58,6 @@ body {}
     }
 
     >.container-fluid {
-        max-width: auto;
 
         @include media-breakpoint-only(sm) {
             padding: 0 15px;
