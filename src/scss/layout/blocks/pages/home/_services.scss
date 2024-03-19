@@ -10,7 +10,11 @@
 
     // @include media-breakpoint-only(xl) {}
 
-    // @include media-breakpoint-only(lg) {}
+    @include media-breakpoint-only(lg) {
+        grid-template-columns: repeat(2, 1fr);
+        width: 960px;
+        margin: 0 auto;
+    }
 
     @include media-breakpoint-only(md) {
         grid-template-columns: repeat(2, 1fr);
