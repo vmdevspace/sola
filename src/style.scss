@@ -71,3 +71,17 @@
 // @include media-breakpoint-only(sm) {}
 
 // @include media-breakpoint-only(xs) {}
+
+
+.sld {
+
+    p {
+        font-size: 14px;
+        text-align: justify;
+        line-height: 24px;
+    }
+}
+
+.splide--slide {
+    padding: 0 !important;
+}

@@ -3,5 +3,87 @@
 }
 
 .b-testimonials {
-    min-height: 200px;
+    // min-height: 200px;
+}
+
+.slider {
+
+    .container {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+
+        .l {
+            display: grid;
+            align-items: center;
+        }
+
+        .center {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .r {
+            display: grid;
+            align-items: center;
+        }
+    }
+
+    .nav {}
+}
+
+.slides {
+    position: absolute;
+
+    display: grid;
+    grid-auto-flow: column;
+
+    transition: all .25s ease;
+
+    .slide {}
+}
+
+.slide-container {}
+
+.dots {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    gap: 5px;
+
+    .dot {
+        width: 10px;
+        height: 10px;
+
+        border: 1px solid #FD8C4E;
+        border-radius: 50%;
+
+        cursor: pointer;
+
+        transition: background-color .25s ease;
+
+        &:hover {
+            background-color: #FD8C4E;
+        }
+    }
+
+    .active {
+        background-color: #FD8C4E;
+    }
+}
+
+.slider-button {
+    width: 50px;
+    height: 50px;
+
+    margin: 0;
+    padding: 0;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+
+    &:hover {
+        color: #FD8C4E;
+    }
 }
