@@ -27,38 +27,46 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-tw:before {
+.icon-time:before {
     content: "\e900";
 }
 
-.icon-time:before {
+.icon-quote:before {
     content: "\e901";
 }
 
-.icon-quote:before {
+.icon-phone:before {
     content: "\e902";
 }
 
-.icon-phone:before {
+.icon-location:before {
     content: "\e903";
 }
 
-.icon-location:before {
+.icon-email:before {
     content: "\e904";
 }
 
-.icon-in:before {
+.icon-chevron-right:before {
     content: "\e905";
 }
 
-.icon-ig:before {
+.icon-chevron-left:before {
     content: "\e906";
 }
 
 .icon-fb:before {
-    content: "\e907";
+    content: "\ea90";
 }
 
-.icon-email:before {
-    content: "\e908";
+.icon-ig:before {
+    content: "\ea92";
+}
+
+.icon-tw:before {
+    content: "\ea96";
+}
+
+.icon-in:before {
+    content: "\eaca";
 }

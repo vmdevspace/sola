@@ -15,17 +15,19 @@ class Slider extends Elements {
     constructor(parameters) {
         super(parameters.slider);
         this.parameters = parameters;
+
         this.items = this.responsive(parameters);
 
         this.offset = 0;
         this.position = 0;
+        this.touchStartX = null;
 
         this.events();
     }
 
     run() {
         this.slidesWidth();
-        this.slidesContainerHeight();
+        // this.slidesContainerHeight();
         this.dotsNavigation();
 
         this.items = this.responsive(this.parameters);
@@ -70,7 +72,7 @@ class Slider extends Elements {
     }
 
     moveFromRightToLeft() {
-        this.offset -= this.slidesContainer.clientWidth;
+        this.offset -= (this.slidesContainer.clientWidth);
 
         this.position++;
 
@@ -94,7 +96,7 @@ class Slider extends Elements {
     }
 
     moveFromLeftToRight() {
-        this.offset += this.slidesContainer.clientWidth;
+        this.offset += (this.slidesContainer.clientWidth);
 
         this.position--;
 
@@ -137,7 +139,7 @@ class Slider extends Elements {
             let bp = parameters.breakpoints;
             let w = window.innerWidth;
 
-            if (bp.hasOwnProperty('xsm') && (w >= 320 && w < 576)) {
+            if (bp.hasOwnProperty('xsm') && (w < 576)) {
                 return Number(bp.xsm.items);
             }
 
@@ -170,6 +172,35 @@ class Slider extends Elements {
         window.addEventListener('resize', () => this.run());
         this.leftBtn.addEventListener('click', () => this.moveFromLeftToRight());
         this.rightBtn.addEventListener('click', () => this.moveFromRightToLeft());
+
+        this.slidesList.addEventListener('touchstart', (e) => this.swipeStart(e));
+        this.slidesList.addEventListener('touchend', (e) => this.swipeEnd(e));
+
+        this.slidesContainer.addEventListener('touchmove', (e) => {
+            let o = 0;
+
+            if (this.touchStartX > (e.touches[0].clientX)) {
+                o = (this.offset) - ((e.touches[0].clientX) / 4);
+            }
+
+            if (this.touchStartX < (e.touches[0].clientX)) {
+                o = (this.offset) + ((e.touches[0].clientX) / 4);
+            }
+
+            this.slidesList.setAttribute('style', 'transform: translateX(' + (o) + 'px)');
+        });
+    }
+
+    swipeStart(e) {
+        this.touchStartX = e.touches[0].clientX;
+    }
+
+    swipeEnd(e) {
+        if (this.touchStartX > e.changedTouches[0].clientX) {
+            this.moveFromRightToLeft();
+        } else {
+            this.moveFromLeftToRight();
+        }
     }
 }
 
@@ -184,6 +215,21 @@ new Slider(
             lg: { items: 1 },
             xl: { items: 1 },
             xxl: { items: 1 }
+        }
+    }
+).run();
+
+new Slider(
+    {
+        slider: "#latest-projects",
+        items: 1,
+        breakpoints: {
+            xsm: { items: 1 },
+            sm: { items: 2 },
+            md: { items: 2 },
+            lg: { items: 3 },
+            xl: { items: 3 },
+            xxl: { items: 4 }
         }
     }
 ).run();
