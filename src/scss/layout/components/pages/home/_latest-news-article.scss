@@ -1,0 +1,27 @@
+.latest-news-article {
+
+    .header {
+
+        .top {
+            font-size: 14px;
+        }
+
+        .title {
+            font-size: 40px;
+
+            // @include media-breakpoint-only(xxl) {}
+
+            // @include media-breakpoint-only(xl) {}
+
+            // @include media-breakpoint-only(lg) {}
+
+            // @include media-breakpoint-only(md) {}
+
+            // @include media-breakpoint-only(sm) {}
+
+            @include media-breakpoint-only(xs) {
+                font-size: 30px;
+            }
+        }
+    }
+}

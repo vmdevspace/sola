@@ -1,17 +1,25 @@
 class Elements {
     constructor(slider) {
         this.slider = slider;
-        this.slidesContainer = document.querySelector(slider + ' > .container > .center');
-        this.slidesList = document.querySelector(slider + ' .slides');
-        this.slides = document.querySelectorAll(slider + ' .slides > .slide');
-        this.dotsList = document.querySelector(slider + ' .dots');
+        this.slidesContainer = this.el(slider + ' > .container > .center');
+        this.slidesList = this.el(slider + ' .slides');
+        this.slides = this.els(slider + ' .slides > .slide');
+        this.leftBtn = this.el(slider + ' .slider-left-btn');
+        this.rightBtn = this.el(slider + ' .slider-right-btn');
+        this.dotsList = this.el(slider + ' .dots');
         this.dots = null;
-        this.leftBtn = document.querySelector(slider + ' .left-btn');
-        this.rightBtn = document.querySelector(slider + ' .right-btn');
+    }
+
+    el(item) {
+        return document.querySelector(item);
+    }
+
+    els(items) {
+        return document.querySelectorAll(items);
     }
 }
 
-class Slider extends Elements {
+export class Slider extends Elements {
     constructor(parameters) {
         super(parameters.slider);
         this.parameters = parameters;
@@ -27,8 +35,8 @@ class Slider extends Elements {
 
     run() {
         this.slidesWidth();
-        // this.slidesContainerHeight();
         this.dotsNavigation();
+        // this.slidesContainerHeight();
 
         this.items = this.responsive(this.parameters);
 
@@ -38,14 +46,14 @@ class Slider extends Elements {
         this.position = 0;
     }
 
+    // slidesContainerHeight() {
+    //     this.slidesContainer.setAttribute('style', 'height:' + (this.slidesList.clientHeight) + 'px');
+    // }
+
     slidesWidth() {
         for (let i = 0; i < this.slides.length; i++) {
             this.slides[i].setAttribute('style', 'width:' + (this.slidesContainer.clientWidth / this.items) + 'px');
         }
-    }
-
-    slidesContainerHeight() {
-        this.slidesContainer.setAttribute('style', 'height:' + (this.slidesList.clientHeight) + 'px');
     }
 
     dotsNavigation() {
@@ -169,26 +177,37 @@ class Slider extends Elements {
     }
 
     events() {
-        window.addEventListener('resize', () => this.run());
-        this.leftBtn.addEventListener('click', () => this.moveFromLeftToRight());
-        this.rightBtn.addEventListener('click', () => this.moveFromRightToLeft());
+        if (window != null) {
+            window.addEventListener('resize', () => this.run());
+        }
 
-        this.slidesList.addEventListener('touchstart', (e) => this.swipeStart(e));
-        this.slidesList.addEventListener('touchend', (e) => this.swipeEnd(e));
+        if (this.slidesList != null) {
+            this.slidesList.addEventListener('touchstart', (e) => this.swipeStart(e));
+            this.slidesList.addEventListener('touchend', (e) => this.swipeEnd(e));
+            this.slidesList.addEventListener('touchmove', (e) => this.touchMove(e));
+        }
 
-        this.slidesContainer.addEventListener('touchmove', (e) => {
-            let o = 0;
+        if (this.leftBtn != null) {
+            this.leftBtn.addEventListener('click', () => this.moveFromLeftToRight());
+        }
 
-            if (this.touchStartX > (e.touches[0].clientX)) {
-                o = (this.offset) - ((e.touches[0].clientX) / 4);
-            }
+        if (this.rightBtn != null) {
+            this.rightBtn.addEventListener('click', () => this.moveFromRightToLeft());
+        }
+    }
 
-            if (this.touchStartX < (e.touches[0].clientX)) {
-                o = (this.offset) + ((e.touches[0].clientX) / 4);
-            }
+    touchMove(e) {
+        let o = 0;
 
-            this.slidesList.setAttribute('style', 'transform: translateX(' + (o) + 'px)');
-        });
+        if (this.touchStartX > (e.touches[0].clientX)) {
+            o = (this.offset) - ((e.touches[0].clientX) / 4);
+        }
+
+        if (this.touchStartX < (e.touches[0].clientX)) {
+            o = (this.offset) + ((e.touches[0].clientX) / 4);
+        }
+
+        this.slidesList.setAttribute('style', 'transform: translateX(' + (o) + 'px)');
     }
 
     swipeStart(e) {
@@ -203,33 +222,3 @@ class Slider extends Elements {
         }
     }
 }
-
-new Slider(
-    {
-        slider: "#testimonials",
-        items: 1,
-        breakpoints: {
-            xsm: { items: 1 },
-            sm: { items: 1 },
-            md: { items: 1 },
-            lg: { items: 1 },
-            xl: { items: 1 },
-            xxl: { items: 1 }
-        }
-    }
-).run();
-
-new Slider(
-    {
-        slider: "#latest-projects",
-        items: 1,
-        breakpoints: {
-            xsm: { items: 1 },
-            sm: { items: 2 },
-            md: { items: 2 },
-            lg: { items: 3 },
-            xl: { items: 3 },
-            xxl: { items: 4 }
-        }
-    }
-).run();

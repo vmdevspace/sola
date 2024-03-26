@@ -22,92 +22,10 @@
     @include media-breakpoint-only(xs) {
         grid-template-columns: none;
     }
-
-    .post {}
-}
-
-.latest-news-post {
-
-    .img-link {
-        display: block;
-
-        &:hover {
-
-            img {
-                opacity: 0.9;
-            }
-        }
-
-        img {
-            display: block;
-            max-width: 100%;
-
-            opacity: 1;
-            transition: opacity .25s ease;
-        }
-    }
-
-    .date {
-        padding: 10px 0 5px;
-
-        .t {
-            font-family: 'Poppins-Medium';
-            font-size: 14px;
-            color: #FD8C4E;
-            text-transform: uppercase;
-        }
-    }
-
-    .title-link {
-        display: block;
-
-        &:hover {
-
-            .title {
-                color: #FD8C4E;
-            }
-        }
-
-        .title {
-            color: #1A2A36;
-            transition: color .25s ease;
-
-            font-family: 'Syne-Bold';
-            font-size: 26px;
-        }
-    }
 }
 
 .latest-news-link {
     margin-top: 50px;
 
     .link {}
-}
-
-.latest-news-article {
-
-    .header {
-
-        .top {
-            font-size: 14px;
-        }
-
-        .title {
-            font-size: 40px;
-
-            // @include media-breakpoint-only(xxl) {}
-
-            // @include media-breakpoint-only(xl) {}
-
-            // @include media-breakpoint-only(lg) {}
-
-            // @include media-breakpoint-only(md) {}
-
-            // @include media-breakpoint-only(sm) {}
-
-            @include media-breakpoint-only(xs) {
-                font-size: 30px;
-            }
-        }
-    }
 }

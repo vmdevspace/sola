@@ -1,0 +1,51 @@
+.post-preview {
+
+    .img-link {
+        display: block;
+
+        &:hover {
+
+            img {
+                opacity: 0.9;
+            }
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+
+            opacity: 1;
+            transition: opacity .25s ease;
+        }
+    }
+
+    .date {
+        padding: 10px 0 5px;
+
+        .t {
+            font-family: 'Poppins-Medium';
+            font-size: 14px;
+            color: #FD8C4E;
+            text-transform: uppercase;
+        }
+    }
+
+    .title-link {
+        display: block;
+
+        &:hover {
+
+            .title {
+                color: #FD8C4E;
+            }
+        }
+
+        .title {
+            color: #1A2A36;
+            transition: color .25s ease;
+
+            font-family: 'Syne-Bold';
+            font-size: 26px;
+        }
+    }
+}
