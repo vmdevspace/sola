@@ -6,7 +6,7 @@ import { Slider as MainSlider } from "./js/main-slider";
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    new MainSlider().run();
+    new MainSlider().start();
 
     new Carousel(
         {

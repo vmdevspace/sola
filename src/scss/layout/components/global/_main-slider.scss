@@ -1,0 +1,134 @@
+.main-slider {
+    position: relative;
+}
+
+.main-slider-slides {
+    position: relative;
+
+    .slide {
+        position: absolute;
+        top: 0;
+        right: auto;
+        bottom: auto;
+        left: auto;
+
+        opacity: 0;
+        transition: opacity 3s ease;
+
+        img {
+            display: block;
+        }
+    }
+
+    .show {
+        position: static;
+        opacity: 1;
+    }
+
+    .na {
+        transition: none;
+    }
+}
+
+.main-slider-navigation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: grid;
+    grid-template-rows: 1fr auto;
+
+    .columns {
+        position: relative;
+    }
+
+    .miniatures {
+        padding-bottom: 60px;
+    }
+}
+
+.main-slider-columns {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+
+    .l {
+        position: relative;
+    }
+
+    .center {}
+
+    .r {
+        position: relative;
+    }
+}
+
+.main-slider-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    .btn {
+        margin: 0;
+        padding: 0;
+        border: none;
+
+        background: none;
+        transition: background-color .25s ease;
+
+        border-radius: 50%;
+
+        width: 75px;
+        height: 75px;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: #fd8b4e70;
+        }
+
+        .i {
+            font-size: 25px;
+            color: #FD8C4E;
+        }
+    }
+}
+
+.main-slider-miniatures {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+
+    .item {
+        width: 60px;
+        height: 5px;
+
+        background-color: #FD8C4E;
+        transition: background-color .25s ease;
+
+        border-radius: 25px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #F9F4EC;
+        }
+    }
+
+    .current {
+        background-color: #F9F4EC;
+    }
+}
