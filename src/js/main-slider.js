@@ -1,9 +1,10 @@
 class Elements {
     constructor(slider) {
-        this.slides = document.querySelectorAll('.main-slider-slides .slide');
-        this.miniatures = document.querySelectorAll('.main-slider-miniatures .item');
-        this.leftBtn = document.querySelector('.main-slider .left-btn');
-        this.rightBtn = document.querySelector('.main-slider .right-btn');
+        this.slides = this.els(slider + ' .main-slider-slides .slide');
+        this.miniatures = this.els(slider + ' .main-slider-miniatures .item');
+        this.articles = this.els(slider + ' .main-slider-articles .article');
+        this.leftBtn = this.el(slider + ' .left-btn');
+        this.rightBtn = this.el(slider + ' .right-btn');
     }
 
     el(item) {
@@ -21,11 +22,16 @@ export class Slider extends Elements {
     timeoutId = null;
     slide = this.startFromSlide();
 
-    constructor() {
-        super();
+    constructor(parameters) {
+        super(parameters.slider);
 
-        this.leftBtn.addEventListener('click', () => this.prev());
-        this.rightBtn.addEventListener('click', () => this.next());
+        if (this.leftBtn != null) {
+            this.leftBtn.addEventListener('click', () => this.prev());
+        }
+
+        if (this.rightBtn != null) {
+            this.rightBtn.addEventListener('click', () => this.next());
+        }
 
         this.miniaturesInit();
     }
@@ -84,11 +90,13 @@ export class Slider extends Elements {
     changeSlide() {
         this.slides[this.slide].classList.add('show');
         this.miniatures[this.slide].classList.add('current');
+        this.articles[this.slide].classList.add('d');
 
         for (let i = 0; i < this.slides.length; i++) {
             if (i != this.slide) {
                 this.slides[i].classList.remove('show');
                 this.miniatures[i].classList.remove('current');
+                this.articles[i].classList.remove('d');
             }
         }
     }
@@ -118,10 +126,7 @@ export class Slider extends Elements {
     miniaturesInit() {
         for (let i = 0; i < this.miniatures.length; i++) {
             this.miniatures[i].setAttribute("data-item", i);
-
-            if (this.miniatures[i] != null) {
-                this.miniatures[i].addEventListener("click", () => this.directChangeSlide(i));
-            }
+            this.miniatures[i].addEventListener("click", () => this.directChangeSlide(i));
         }
     }
 

@@ -1,12 +1,12 @@
-// scss
-// import './style.scss';
-
 import { Slider as Carousel } from "./js/carousel";
 import { Slider as MainSlider } from "./js/main-slider";
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    new MainSlider().start();
+    new MainSlider(
+        {
+            slider: "#mainslider"
+        }).start();
 
     new Carousel(
         {
