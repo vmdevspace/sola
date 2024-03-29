@@ -3,6 +3,7 @@ class Elements {
         this.slides = this.els(slider + ' .main-slider-slides .slide');
         this.miniatures = this.els(slider + ' .main-slider-miniatures .item');
         this.articles = this.els(slider + ' .main-slider-articles .article');
+        this.center = this.el(slider + ' .center');
         this.leftBtn = this.el(slider + ' .left-btn');
         this.rightBtn = this.el(slider + ' .right-btn');
     }
@@ -19,20 +20,13 @@ class Elements {
 export class Slider extends Elements {
     firstStartTimeout = 5000;
     changeSlideTimeout = 7000;
-    timeoutId = null;
     slide = this.startFromSlide();
+    timeoutId = null;
+    touchStartX = null;
 
     constructor(parameters) {
         super(parameters.slider);
-
-        if (this.leftBtn != null) {
-            this.leftBtn.addEventListener('click', () => this.prev());
-        }
-
-        if (this.rightBtn != null) {
-            this.rightBtn.addEventListener('click', () => this.next());
-        }
-
+        this.events();
         this.miniaturesInit();
     }
 
@@ -138,5 +132,32 @@ export class Slider extends Elements {
 
         this.changeSlide();
         this.start();
+    }
+
+    swipeStart(e) {
+        this.touchStartX = e.touches[0].clientX;
+    }
+
+    swipeEnd(e) {
+        if (this.touchStartX > e.changedTouches[0].clientX) {
+            this.prev();
+        } else {
+            this.next();
+        }
+    }
+
+    events() {
+        if (this.leftBtn != null) {
+            this.leftBtn.addEventListener('click', () => this.prev());
+        }
+
+        if (this.rightBtn != null) {
+            this.rightBtn.addEventListener('click', () => this.next());
+        }
+
+        if (this.center != null) {
+            this.center.addEventListener('touchstart', (e) => this.swipeStart(e));
+            this.center.addEventListener('touchend', (e) => this.swipeEnd(e));
+        }
     }
 }
