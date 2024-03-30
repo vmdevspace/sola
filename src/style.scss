@@ -31,6 +31,7 @@
 
 @import './scss/layout/components/global/slider';
 @import './scss/layout/components/global/main-slider';
+@import './scss/layout/components/global/callback';
 
 @import './scss/layout/components/header/fixed/header-top-items';
 @import './scss/layout/components/header/fixed/header-top-socials';
@@ -54,6 +55,14 @@
 @import './scss/layout/components/footer/footer-contacts';
 @import './scss/layout/components/footer/footer-gallery';
 @import './scss/layout/components/footer/footer-newsletter';
+
+.d {
+    display: block;
+}
+
+.a {
+    opacity: 1;
+}
 
 .test {
     display: flex;

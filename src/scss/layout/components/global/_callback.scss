@@ -1,0 +1,148 @@
+.callback {
+    display: none;
+    opacity: 0;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 11;
+
+    background-color: #000000cc;
+
+    >.inner {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        >.container {
+            width: 300px;
+            background-color: #F9F4EC;
+            position: relative;
+        }
+    }
+}
+
+.callback-container {
+    padding: 10px;
+
+    .top {}
+
+    .info {}
+
+    .form {
+        padding-top: 20px;
+    }
+}
+
+.callback-top {
+    display: grid;
+    grid-template-columns: 1fr auto;
+
+    .c-1 {
+
+        .title {}
+    }
+
+    .c-2 {
+
+        .close {
+
+            cursor: pointer;
+        }
+    }
+}
+
+.callback-form {
+
+    .row-1 {}
+
+    .row-2 {}
+
+    .row-3 {
+        padding-top: 10px;
+
+        .submit {
+            display: block;
+            width: 100%;
+            cursor: pointer;
+
+            // border: none;
+            // background: none;
+            // margin: 0;
+            // padding: 0;
+        }
+    }
+}
+
+.form-input {
+
+    .field {
+
+        .label {
+
+            label {}
+        }
+
+        .input {
+
+            input {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    .error {
+        height: 20px;
+    }
+}
+
+
+
+.form-preloader {
+    display: none;
+    opacity: 0;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: #000000ea;
+
+    >.inner {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.form-preloader-status {
+
+    .item {}
+}
+
+.callback-form-info {
+
+    p {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+}
