@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
     new MainSlider(
         {
             slider: "#mainslider"
-        }).start();
+        }
+    ).start();
 
     new Carousel(
         {
